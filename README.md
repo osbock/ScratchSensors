@@ -13,27 +13,27 @@ Unzip the contents of this repository into a directory called ScratchSensors
 in the Arduino libraries directory (or in Sketchbook/libraries)
 
 In your sketch:
-#include <ScratchSensors.h>
+`#include <ScratchSensors.h>`
 
 and then:
-ScratchSensors Scratchboard;
+`ScratchSensors Scratchboard;`
 
 In Setup:
-Scratchboard.init();
+`Scratchboard.init();`
 
 Sensor values are stored in an array internally to the ScratchSensors class
-called Values[];
+called `Values[];`
 
 The picoboard/Scratch sensor board that is emulated has specific sensor labels
 that are reported:
-#define RESISTA 0
+`#define RESISTA 0
 #define RESISTB 1
 #define RESISTC 2
 #define RESISTD 3
 #define SLIDER  4
 #define LIGHT   5
 #define SOUND   6
-#define BUTTON  7
+#define BUTTON  7`
 
 Values should be between 0 and 1023. These are scaled by scratch to be 
 between 0 and 100.
@@ -44,12 +44,12 @@ Let's say you have an analog sensor like an accelerometer connected to Arduino
 pins A0, A1, and A2.
 
 Then during loop():
-Values[RESISTA] = analogRead(A0);
+`Values[RESISTA] = analogRead(A0);
 Values[RESISTB] = analogRead(A1);
-Values[RESISTC] = analogRead(A2);
+Values[RESISTC] = analogRead(A2);`
 
 then, write the packets out to the serial/usb port:
-Scratchboard.report();
+`Scratchboard.report();`
 
 There's an example in the examples directory based on the Sparkfun midi shield.
 It has two pots and three buttons. Of course only one of the buttons can be 
