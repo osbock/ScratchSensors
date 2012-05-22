@@ -26,14 +26,14 @@ called `Values[];`
 
 The picoboard/Scratch sensor board that is emulated has specific sensor labels
 that are reported:
-`#define RESISTA 0
-#define RESISTB 1
-#define RESISTC 2
-#define RESISTD 3
-#define SLIDER  4
-#define LIGHT   5
-#define SOUND   6
-#define BUTTON  7`
+`#define RESISTA 0`
+`#define RESISTB 1`
+`#define RESISTC 2`
+`#define RESISTD 3`
+`#define SLIDER  4`
+`#define LIGHT   5`
+`#define SOUND   6`
+`#define BUTTON  7`
 
 Values should be between 0 and 1023. These are scaled by scratch to be 
 between 0 and 100.
